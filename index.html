@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>古语新说</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url("img/进度条背景.jpg"); /* 设置背景图片 */
+            background-size: cover;
+            background-position: center;
+        }
+        .container {
+            text-align: center;
+            background-color: rgba(237, 211, 188, 1.0); /* 半透明背景 */
+            padding: 20px; /* 减少填充 */
+            border-radius: 10px; /* 减小圆角 */
+            width: 90%;
+            max-width: 360px;
+            height: 90%;
+            max-height: 640px;
+        }
+        .progress-bar-container {
+            width: 80%;
+            margin: 10px auto; /* 减少间距 */
+            background-color: #ecd2bb;
+            border-radius: 15px; /* 减小圆角 */
+            overflow: hidden;
+        }
+        .progress-bar {
+            width: 0;
+            height: 20px; /* 减小高度 */
+            background: linear-gradient(to right, #aaaa00, #55aa00); /* 渐变颜色 */
+            transition: width 0.5s ease-in-out;
+            border-radius: 15px; /* 减小圆角 */
+        }
+        .navigate-button {
+            background-color: #e9b48d; /* 按钮背景颜色 */
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 18px; /* 减小字体 */
+            font-weight: bold;
+            padding: 8px 16px; /* 减少填充 */
+            border-radius: 8px; /* 减小圆角 */
+            margin-top: 10px; /* 减少间距 */
+            transition: background-color 0.3s ease;
+			position: relative;
+			left: -25px; /* 调整位置 */
+        }
+        .navigate-button:hover {
+            background-color: #578c61; /* 鼠标悬停时的颜色 */
+        }
+        .click-icon {
+            max-width: 70px; /* 减小最大宽度 */
+            height: 70px; /* 减小高度 */
+            position: relative;
+            left: 155px; /* 调整位置 */
+            top: 75px; /* 调整位置 */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="img/进度条图片.gif" alt="Progress GIF" style="max-width: 280px; height: 250px;">
+        <div class="progress-bar-container">
+            <div id="progressBar" class="progress-bar"></div>
+        </div>
+        <img src="img/点击.gif" alt="Click Icon" class="click-icon">
+        <button class="navigate-button" onclick="navigateToFriendCircle()">点我进入名流朋友圈</button>
+    </div>
+
+    <script>
+        // Simulate progress bar filling up with gradient effect
+        function simulateProgress() {
+            let progressBar = document.getElementById('progressBar');
+            let width = 0;
+            let interval = setInterval(function() {
+                if (width >= 100) {
+                    clearInterval(interval);
+                } else {
+                    width++;
+                    progressBar.style.width = width + '%';
+                }
+            }, 50);
+        }
+
+        // Navigate to friend circle page
+        function navigateToFriendCircle() {
+            window.location.href = 'content.html';
+        }
+
+        // Start the simulation when the page loads
+        window.onload = simulateProgress;
+    </script>
+</body>
+</html>
+
+
+

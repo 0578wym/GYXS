@@ -1,0 +1,270 @@
+/* 基本样式 */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.friend-circle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 15px; /* 减少填充 */
+}
+
+.friend-back {
+    width: 365px; /* 适合360px宽度 */
+    height: 300px; /* 适合640px高度 */
+}
+
+.background {
+    position: relative;
+    background-image: url("../img/进度条背景.jpg");
+    padding: 15px; /* 减少填充 */
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+.profile-avatar {
+    position: absolute;
+    top: 270px; /* 调整位置 */
+    left: 295px; /* 调整位置 */
+    width: 80px; /* 减小尺寸 */
+    height: 80px; /* 减小尺寸 */
+    border-radius: 50%;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* 减少间距 */
+}
+
+.avatar {
+    width: 80px; /* 减小尺寸 */
+    height: 80px; /* 减小尺寸 */
+    border-radius: 50%;
+    margin-right: 5px; /* 减少间距 */
+}
+
+.nickname {
+    font-size: 20px; /* 减小字体 */
+    font-weight: bold;
+}
+
+.nickname1 {
+    font-weight: bold;
+    position: absolute;
+    font-size: 20px; /* 减小字体 */
+    top: 310px; /* 调整位置 */
+    left: 205px; /* 调整位置 */
+}
+
+.posts {
+    background-color: #a9a38b;
+    padding: 10px; /* 减少填充 */
+    border-radius: 8px;
+}
+
+.post {
+    background-color: #c6b799;
+    padding: 5px; /* 减少填充 */
+    border-radius: 8px;
+    margin-bottom: 10px; /* 减少间距 */
+}
+
+.post-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post-image {
+    width: 100%; /* 调整图片大小 */
+    max-width: 270px; /* 减小最大宽度 */
+    height: auto;
+    margin-bottom: 5px; /* 减少间距 */
+    border-radius: 8px;
+    position: relative;
+    top: -40px; /* 调整位置 */
+    left: -515px; /* 调整位置 */
+}
+
+.post-text {
+    font-size: 15px; /* 减小字体 */
+    position: relative;
+    top: 300px; /* 调整位置 */
+    left: -90px; /* 调整位置 */
+}
+
+.post-text1{
+    font-size: 15px; /* 减小字体 */
+    position: relative;
+    top: -40px; /* 调整位置 */
+	left: -500px;
+}
+.post-text2{
+    font-size: 15px; /* 减小字体 */
+    position: relative;
+    top: -40px; /* 调整位置 */
+	left: -580px;
+}
+.post-text3{
+    font-size: 15px; /* 减小字体 */
+    position: relative;
+    top: -40px; /* 调整位置 */
+	left: -515px;
+}
+.post-text4{
+    font-size: 15px; /* 减小字体 */
+    position: relative;
+    top: -40px; /* 调整位置 */
+	left: -535px;
+}
+.post-text5{
+    font-size: 15px; /* 减小字体 */
+    position: relative;
+    top: -40px; /* 调整位置 */
+	left: -615px;
+}
+.post-text6{
+    font-size: 15px; /* 减小字体 */
+    position: relative;
+    top: -40px; /* 调整位置 */
+	left: -580px;
+}
+.post-text7{
+    font-size: 15px; /* 减小字体 */
+    position: relative;
+    top: -40px; /* 调整位置 */
+	left: -560px;
+}
+.post-text8 {
+    font-size: 20px; /* 减小字体 */
+    position: relative;
+    top: -40px; /* 调整位置 */
+	left: -545px;
+}
+
+.interaction {
+    display: flex;
+    justify-content: right;
+    margin-top: 5px; /* 减少间距 */
+}
+
+.like-button,
+.comment-button {
+    background-color: #a9a38b;
+    font-size: 20px; /* 减小字体 */
+    color: black;
+    border: none;
+    padding: 5px 10px; /* 减少填充 */
+    border-radius: 4px;
+    margin: 0 2.5px; /* 减少间距 */
+    cursor: pointer;
+    width: 100px; /* 减小宽度 */
+    height: 50px; /* 减小高度 */
+}
+
+.like-button:hover,
+.comment-button:hover {
+    background-color: #84aebf;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 360px; /* 适合360px宽度 */
+    margin-top: 5%;
+}
+
+.close {
+    position: absolute;
+    top: 10px; /* 减少顶部间距 */
+    right: 25px; /* 减少右侧间距 */
+    color: #f1f1f1;
+    font-size: 30px; /* 减小字体 */
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.post-image {
+    cursor: pointer;
+}
+
+.music-controls {
+    position: fixed;
+    top: 30px; /* 减少顶部间距 */
+    left: 260px; /* 调整位置 */
+    z-index: 2;
+}
+
+.music-controls audio {
+    width: 150px; /* 减小宽度 */
+}
+
+.comments-section {
+    margin-top: 5px; /* 减少间距 */
+}
+
+.comment {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2.5px; /* 减少间距 */
+}
+
+.comment-avatar {
+    border-radius: 50%;
+    width: 30px; /* 减小尺寸 */
+    height: 30px; /* 减小尺寸 */
+    margin-right: 5px; /* 减少间距 */
+}
+
+.comment-text {
+    font-size: 15px; /* 减小字体 */
+}
+
+.likes-comments {
+    margin-top: 5px; /* 减少间距 */
+}
+
+.likes-list {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px; /* 减少间距 */
+}
+
+.like-avatar {
+    border-radius: 50%;
+    width: 30px; /* 减小尺寸 */
+    height: 30px; /* 减小尺寸 */
+    margin-right: 2.5px; /* 减少间距 */
+}
+
+
+
