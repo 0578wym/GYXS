@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -65,6 +65,112 @@
             <div id="progressBar" class="progress-bar"></div>
         </div>
 		<img src="img/点击.gif" alt="" style="max-width: 50px; height: 50px; position: relative; left: 200px; top: 30px;"/>
+        <button class="navigate-button" onclick="navigateToFriendCircle()">点我进入名流朋友圈</button>
+    </div>
+
+    <script>
+        // Simulate progress bar filling up with gradient effect
+        function simulateProgress() {
+            let progressBar = document.getElementById('progressBar');
+            let width = 0;
+            let interval = setInterval(function() {
+                if (width >= 100) {
+                    clearInterval(interval);
+                } else {
+                    width++;
+                    progressBar.style.width = width + '%';
+                }
+            }, 50);
+        }
+
+        // Navigate to friend circle page
+        function navigateToFriendCircle() {
+            window.location.href = 'index.html';
+        }
+
+        // Start the simulation when the page loads
+        window.onload = simulateProgress;
+    </script>
+</body>
+</html>
+
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>进度条页面</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url("img/进度条背景.jpg"); /* 设置背景图片 */
+            background-size: cover;
+            background-position: center;
+        }
+        .container {
+            text-align: center;
+            background-color: rgba(237, 211, 188, 0.9); /* 半透明背景 */
+            padding: 4vw; /* 使用相对单位 */
+            border-radius: 15px;
+            width: 90%; /* 使用百分比 */
+            max-width: 500px;
+            box-sizing: border-box; /* 确保内边距和边框包含在宽度内 */
+        }
+        .progress-bar-container {
+            width: 80%;
+            margin: 2vw auto; /* 使用相对单位 */
+            background-color: #ecd2bb;
+            border-radius: 25px;
+            overflow: hidden;
+        }
+        .progress-bar {
+            width: 0;
+            height: 6vw; /* 使用相对单位 */
+            background: linear-gradient(to right, #aaaa00, #55aa00); /* 渐变颜色 */
+            transition: width 0.5s ease-in-out;
+            border-radius: 25px; /* 确保边缘圆滑 */
+        }
+        .navigate-button {
+            background-color: #e9b48d; /* 按钮背景颜色 */
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 4vw; /* 使用相对单位 */
+            font-weight: bold;
+            padding: 1.5vw 3vw; /* 使用相对单位 */
+            border-radius: 10px;
+            margin-top: 2vw; /* 使用相对单位 */
+            transition: background-color 0.3s ease;
+        }
+        .navigate-button:hover {
+            background-color: #578c61; /* 鼠标悬停时的颜色 */
+        }
+        img {
+            max-width: 100%; /* 图片自适应宽度 */
+            height: auto;
+        }
+        @media (max-width: 600px) {
+            .navigate-button {
+                font-size: 5vw; /* 更大的字体在小屏幕上 */
+                padding: 2vw 4vw; /* 更大的填充在小屏幕上 */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="img/进度条图片.gif" alt="Progress GIF">
+        <div class="progress-bar-container">
+            <div id="progressBar" class="progress-bar"></div>
+        </div>
+        <img src="img/点击.gif" alt="Click Icon" style="position: relative; top: 2vw;">
         <button class="navigate-button" onclick="navigateToFriendCircle()">点我进入名流朋友圈</button>
     </div>
 
